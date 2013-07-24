@@ -17,6 +17,7 @@
 	body{
 		margin: 0px;
 		padding: 0px;
+		background-color: #2980b9;
 	}
 	.road{
 		width: 4000px;
@@ -81,19 +82,66 @@
 	}
 
 	.car2{
-		top:160px;
+		top:162px;
 		left:900px;
 		z-index: -9;
 	}
 
 	.car1{
-		top:220px;
+		top:210px;
 		left:1000px;
 	}
 
-	h1{
+	/** content **/
+
+	.fork{
+		position: absolute;
+		float: left;
+		top: 0px;
+		left: 0px;
+	}
+	.content{
+		position: relative;
+		top:-80px;
+		margin-left: 100px;
+		width: 700px;
+		/*display: none;*/
+	}
+	h1, h2{
+		font-family: "Source Sans Pro",sans-serif;
+		color: #ecf0f1;
+		
 		padding: 0px;
-		margin:0px;
+		margin: 0px;
+		font-weight: normal;
+	}
+
+	h1{
+		font-weight: 900;
+		font-size: 56px;
+
+	}
+
+	h2{
+		font-size:26px;
+	}
+
+	p{
+		color: #ecf0f1;
+		font-family: "Lato";
+		line-height: 28px;
+		font-size: 15px;
+		padding-top: 50px;
+	}
+
+	p.credit{
+		padding-top: 20px;
+		font-size: 12px;
+	}
+
+	p a{
+		color: #ecf0f1;
+		
 	}
 	</style>
 </head>
@@ -124,7 +172,20 @@
 		<img src="img/road.jpg" alt="">
 		<img src="img/road.jpg" alt="">
 	</div>
-	<h1>Helllo</h1>
+	<div class="fork">
+		<a href='https://github.com/hasinhayder/CSS3-Keyframe-Transition' target='_blank'><img src="img/fork.png" alt=""></a>
+	</div>
+	<div class="content">
+		<h1>CSS3 KEYFRAME ANIMATION</h1>
+		<h2>WITH CSS3 TRANSITIONS & JQUERY TRANSIT</h2>
+		<p>
+			This is an example of a combined effect of CSS3 Keyframe Animation with CSS3 Transitions using <a target='_blank' href='http://ricostacruz.com/jquery.transit/'>jQuery Transit Library</a>. I kept the code clean and uncluttered so that you can understand what's happening just by having a look at it. Meanwhile, I will suggest you to have a look at <a target='_blank' href='http://ricostacruz.com/jquery.transit/'>jQuery Transit Documentation</a>.
+		</p>
+
+		<p class="credit">
+			Illustration Credit: Buildings are purchased from <a href='https://creativemarket.com/MiaCharro/3302-Little-city' target='_blank'> Creative Market </a>, and Cars are purchased  from <a target='_blank' href='http://www.shutterstock.com/pic-112477031/stock-vector-car-icon-set.html'>ShutterStock</a>. 
+		</p>
+	</div>
 	<script>
 	$(document).ready(function(){
 		moveCar2();
