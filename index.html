@@ -22,7 +22,7 @@
 		width: 4000px;
 		position: relative;
 		z-index:-10;
-		top:-130;
+		top:-127px;
 	}
 
 	.road img{
@@ -88,7 +88,12 @@
 
 	.car1{
 		top:220px;
-		left:1100px;
+		left:1000px;
+	}
+
+	h1{
+		padding: 0px;
+		margin:0px;
 	}
 	</style>
 </head>
@@ -119,6 +124,7 @@
 		<img src="img/road.jpg" alt="">
 		<img src="img/road.jpg" alt="">
 	</div>
+	<h1>Helllo</h1>
 	<script>
 	$(document).ready(function(){
 		moveCar2();
@@ -132,14 +138,11 @@
 		});
 	}
 	function moveCar1(){
-		$(".car1").transition({x:-1600,scale:0.4},6000,"linear")
+		$(".car1").transition({x:-1750,scale:0.4},7000,"linear")
 		.transition({x:00},0,function(){
 			moveCar1();
 		});
 	}
-
-
-
 	</script>
 </body>
 </html>
