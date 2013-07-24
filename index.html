@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" prefix="og: http://ogp.me/ns#" > <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" prefix="og: http://ogp.me/ns#"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>CSS3 Keyframe Animation and Transition</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900">
+	<link href='http://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
+
+	<script src='js/jquery-1.10.2.js'></script>
+	<script src='js/jquery.transit.js'></script>
+	<style>
+	body{
+		margin: 0px;
+		padding: 0px;
+	}
+	.road{
+		width: 4000px;
+		position: relative;
+		z-index:-10;
+		top:-130;
+	}
+
+	.road img{
+		/*width: 100%;*/
+		float: left;
+	}
+	.car{
+		position: relative;
+		-webkit-transform:scale(0.4);
+	}
+
+	.car .body{
+		position: absolute;
+	}
+
+	.car .tyre-front{
+		position: absolute;
+		top:260px;
+		left:88px;
+		-webkit-animation:rotateit 0.7s linear;
+		-webkit-animation-iteration-count:infinite;
+	}
+	.car .tyre-back{
+		position: absolute;
+		top:260px;
+		left:330px;
+		-webkit-animation:rotateit 0.7s linear;
+		-webkit-animation-iteration-count:infinite;
+	}
+
+	.car1 .tyre-front{
+		top:270px;
+		left:85px;
+	}
+
+	.car1 .tyre-back{
+		top:270px;
+		left:325px;
+	}
+
+	.car .tyre-front img, .car .tyre-back img{
+		width: 110px;
+	}
+
+	@-webkit-keyframes rotateit
+	{
+		0% {
+			-webkit-transform:rotate(360deg);
+		}
+		50% {
+			-webkit-transform:rotate(180deg);
+		}
+		100% {
+			-webkit-transform:rotate(0deg);
+		}
+	}
+
+	.car2{
+		top:160px;
+		left:900px;
+		z-index: -9;
+	}
+
+	.car1{
+		top:220px;
+		left:1100px;
+	}
+	</style>
+</head>
+<body>
+	<div class="car car1">
+		<div class="body">
+			<img src="img/car.png" alt="">
+		</div>
+		<div class="tyre-front">
+			<img src="img/tyre.png" alt="">
+		</div>
+		<div class="tyre-back">
+			<img src="img/tyre.png" alt="">
+		</div>
+	</div><div class="car car2">
+		<div class="body">
+			<img src="img/car3.png" alt="">
+		</div>
+		<div class="tyre-front">
+			<img src="img/tyre.png" alt="">
+		</div>
+		<div class="tyre-back">
+			<img src="img/tyre.png" alt="">
+		</div>
+	</div>
+
+	<div class="road">
+		<img src="img/road.jpg" alt="">
+		<img src="img/road.jpg" alt="">
+	</div>
+	<script>
+	$(document).ready(function(){
+		moveCar2();
+		moveCar1();
+	});
+
+	function moveCar2(){
+		$(".car2").transition({x:-1500,scale:0.4},5000,"linear")
+		.transition({x:00},0,function(){
+			moveCar2();
+		});
+	}
+	function moveCar1(){
+		$(".car1").transition({x:-1600,scale:0.4},6000,"linear")
+		.transition({x:00},0,function(){
+			moveCar1();
+		});
+	}
+
+
+
+	</script>
+</body>
+</html>
