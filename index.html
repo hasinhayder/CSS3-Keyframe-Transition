@@ -33,6 +33,9 @@
 	.car{
 		position: relative;
 		-webkit-transform:scale(0.4);
+		-moz-transform:scale(0.4);
+		-o-transform:scale(0.4);
+		transform:scale(0.4);
 	}
 
 	.car .body{
@@ -44,14 +47,28 @@
 		top:260px;
 		left:88px;
 		-webkit-animation:rotateit 0.7s linear;
+		-moz-animation:rotateit 0.7s linear;
+		-o-animation:rotateit 0.7s linear;
+		animation:rotateit 0.7s linear;
+
 		-webkit-animation-iteration-count:infinite;
+		-moz-animation-iteration-count:infinite;
+		-o-animation-iteration-count:infinite;
+		animation-iteration-count:infinite;
 	}
 	.car .tyre-back{
 		position: absolute;
 		top:260px;
 		left:330px;
 		-webkit-animation:rotateit 0.7s linear;
+		-moz-animation:rotateit 0.7s linear;
+		-o-animation:rotateit 0.7s linear;
+		animation:rotateit 0.7s linear;
+
 		-webkit-animation-iteration-count:infinite;
+		-moz-animation-iteration-count:infinite;
+		-o-animation-iteration-count:infinite;
+		animation-iteration-count:infinite;
 	}
 
 	.car1 .tyre-front{
@@ -72,12 +89,21 @@
 	{
 		0% {
 			-webkit-transform:rotate(360deg);
+			-moz-transform:rotate(360deg);
+			-o-transform:rotate(360deg);
+			transform:rotate(360deg);
 		}
 		50% {
 			-webkit-transform:rotate(180deg);
+			-moz-transform:rotate(180deg);
+			-o-transform:rotate(180deg);
+			transform:rotate(180deg);
 		}
 		100% {
 			-webkit-transform:rotate(0deg);
+			-moz-transform:rotate(0deg);
+			-o-transform:rotate(0deg);
+			transform:rotate(0deg);
 		}
 	}
 
